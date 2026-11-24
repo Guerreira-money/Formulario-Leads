@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rio Fale com seu Corretor</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f2f4ef;
+            color: #173b31;
+            font: 16px system-ui, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            background: #173b31;
+            color: white;
+            padding: 40px 18px 48px;
+        }
+
+        header small {
+            color: #e5ca91;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font: 36px Georgia, serif;
+            margin: 14px 0;
+        }
+
+        main {
+            max-width: 730px;
+            margin: -22px auto 30px;
+            padding: 0 14px;
+        }
+
+        form {
+            background: white;
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: 0 8px 30px #173b3118;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin: 18px 0 6px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            font: inherit;
+            padding: 13px;
+            border: 1px solid #bdc9c1;
+            border-radius: 8px;
+            background: white;
+            color: #173b31;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            background: #176b46;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            padding: 16px;
+            width: 100%;
+            font: 600 16px system-ui;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:disabled {
+            opacity: 0.55;
+        }
+
+        h2 {
+            font: 25px Georgia, serif;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        a {
+            color: #176b46;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .trap {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <small>ASSESSORIA IMOBILIÁRIA</small>
+
+    <h1>Rio Fale com seu Corretor</h1>
+
+    <p>Seu próximo imóvel começa aqui.</p>
+
+    Viviane Costa | Corretora de imóveis
+</header>
+
+<main>
+
+<form
+    id="lead"
+    method="POST"
+    action="https://script.google.com/macros/s/AKfycbyUUgDT35WZLtJJvyKddDRQtJCo_VZ7KWQV5pTfWDMfwMUNjxdkyk8L4ONJeFhr1bLgBQ/exec"
+>
+
+    <h2>Vamos conhecer seu perfil?</h2>
+
+    <p>
+        Preencha as informações para receber
+        um atendimento personalizado.
+    </p>
+
+    <label for="nome">Nome completo</label>
+    <input
+        id="nome"
+        name="nome"
+        type="text"
+        maxlength="150"
+        placeholder="Digite seu nome"
+        required
+    >
+
+    <label for="telefone">Telefone / WhatsApp</label>
+    <input
+        id="telefone"
+        name="telefone"
+        type="tel"
+        maxlength="150"
+        placeholder="(21) 99999-9999"
+        required
+    >
+
+    <label for="email">E-mail (opcional)</label>
+    <input
+        id="email"
+        name="email"
+        type="email"
+        maxlength="150"
+        placeholder="Seu e-mail"
+    >
+
+    <h2>Seu imóvel ideal</h2>
+
+    <label for="regiao">
+        Qual região você procura?
+    </label>
+
+    <select id="regiao" name="regiao" required>
+        <option value="">Selecione</option>
+        <option>Zona Sul</option>
+        <option>Zona Norte</option>
+        <option>Zona Oeste</option>
+        <option>Barra da Tijuca e Recreio</option>
+        <option>Centro e Porto Maravilha</option>
+        <option>Baixada Fluminense</option>
+        <option>Niterói</option>
+        <option>Outra região</option>
+        <option>Ainda não decidi</option>
+    </select>
+
+    <label for="tipo">
+        Qual tipo de imóvel você procura?
+    </label>
+
+    <select id="tipo" name="tipo" required>
+        <option value="">Selecione</option>
+        <option>Apartamento</option>
+        <option>Casa</option>
+        <option>Studio</option>
+        <option>Cobertura</option>
+        <option>Garden</option>
+        <option>Imóvel comercial</option>
+        <option>Ainda não decidi</option>
+    </select>
+
+    <label for="quartos">
+        Quantidade de quartos
+    </label>
+
+    <select id="quartos" name="quartos" required>
+        <option value="">Selecione</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4 ou mais</option>
+        <option>Indiferente</option>
+    </select>
+
+    <label for="finalidade">
+        Qual é o objetivo da compra?
+    </label>
+
+    <select id="finalidade" name="finalidade" required>
+        <option value="">Selecione</option>
+        <option>Morar</option>
+        <option>Investir para alugar</option>
+        <option>Investir para revender</option>
+        <option>Segunda residência</option>
+        <option>Sair do aluguel</option>
+        <option>Ainda estou avaliando</option>
+    </select>
+
+    <label for="prazo">
+        Em quanto tempo pretende comprar?
+    </label>
+
+    <select id="prazo" name="prazo" required>
+        <option value="">Selecione</option>
+        <option>Imediatamente</option>
+        <option>Nos próximos 30 dias</option>
+        <option>De 1 a 3 meses</option>
+        <option>De 3 a 6 meses</option>
+        <option>De 6 meses a 1 ano</option>
+        <option>Acima de 1 ano</option>
+        <option>Estou apenas pesquisando</option>
+    </select>
+
+    <h2>Perfil financeiro</h2>
+
+    <label for="renda">
+        Qual é a sua renda familiar bruta mensal?
+    </label>
+
+    <select id="renda" name="renda" required>
+        <option value="">Selecione</option>
+        <option>Até R$ 3.000</option>
+        <option>De R$ 3.001 a R$ 5.000</option>
+        <option>De R$ 5.001 a R$ 8.000</option>
+        <option>De R$ 8.001 a R$ 12.000</option>
+        <option>De R$ 12.001 a R$ 20.000</option>
+        <option>De R$ 20.001 a R$ 30.000</option>
+        <option>De R$ 30.001 a R$ 50.000</option>
+        <option>Acima de R$ 50.000</option>
+        <option>
+            Prefiro informar durante o atendimento
+        </option>
+    </select>
+
+    <label for="pagamento">
+        Como pretende adquirir o imóvel?
+    </label>
+
+    <select id="pagamento" name="pagamento" required>
+        <option value="">Selecione</option>
+        <option>Financiamento bancário</option>
+        <option>Pagamento à vista</option>
+        <option>Financiamento direto com a construtora</option>
+        <option>Consórcio</option>
+        <option>Preciso de orientação</option>
+    </select>
+
+    <label for="entrada">
+        Possui valor disponível para entrada? (Opcional)
+    </label>
+
+    <input
+        id="entrada"
+        name="entrada"
+        type="text"
+        maxlength="150"
+        placeholder="Informe o valor aproximado"
+    >
+
+    <label for="fgts">
+        Pretende utilizar o FGTS?
+    </label>
+
+    <select id="fgts" name="fgts" required>
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sei</option>
+    </select>
+
+    <label for="observacoes">
+        Informações adicionais (opcional)
+    </label>
+
+    <textarea
+        id="observacoes"
+        name="observacoes"
+        rows="4"
+        maxlength="1000"
+        placeholder="Ex.: garagem, varanda, suíte, proximidade do metrô..."
+    ></textarea>
+
+    <!-- Proteção básica contra robôs -->
+
+    <div class="trap" aria-hidden="true">
+        <label>
+            Não preencher
+            <input
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+            >
+        </label>
+    </div>
+
+    <!-- Consentimento para tratamento dos dados -->
+
+    <label style="font-weight: normal;">
+        <input
+            type="checkbox"
+            name="consentimento"
+            value="Sim"
+            required
+        >
+
+        Autorizo o tratamento dos meus dados para
+        atendimento imobiliário e apresentação de
+        oportunidades. Posso solicitar a correção
+        ou exclusão dos meus dados pelo e-mail
+        riofalecomseucorretor@gmail.com.
+        Os dados serão armazenados em planilha
+        privada e poderão gerar notificações
+        à corretora.
+    </label>
+
+    <input
+        type="hidden"
+        name="origem"
+        id="origem"
+    >
+
+    <button type="submit">
+        Solicitar atendimento personalizado
+    </button>
+
+    <p id="status" role="status"></p>
+
+    <p>
+        Prefere conversar diretamente?
+
+        <a href="https://wa.me/5521974688201">
+            Fale comigo pelo WhatsApp
+        </a>.
+    </p>
+
+</form>
+
+</main>
+
+<footer>
+    Rio Fale com seu Corretor
+</footer>
+
+<script>
+
+    const formulario = document.getElementById("lead");
+
+    const parametros = new URLSearchParams(
+        window.location.search
+    );
+
+    document.getElementById("origem").value =
+        parametros.get("utm_source") || "Site";
+
+    formulario.addEventListener("submit", function () {
+
+        const botao = formulario.querySelector("button");
+
+        botao.disabled = true;
+
+        document.getElementById("status").textContent =
+            "Enviando suas informações...";
+
+    });
+
+</script>
+
+</body>
+</html>
