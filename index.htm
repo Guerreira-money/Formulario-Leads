@@ -390,6 +390,7 @@ function gtag_report_conversion(url) {
 
 </main>
 
+
 <footer>
     Rio Fale com seu Corretor
 </footer>
@@ -405,16 +406,42 @@ function gtag_report_conversion(url) {
     document.getElementById("origem").value =
         parametros.get("utm_source") || "Site";
 
-    formulario.addEventListener("submit", function () {
+    formulario.addEventListener("submit", function (event) {
+
+        event.preventDefault();
 
         const botao = formulario.querySelector("button");
+
+        if (botao.disabled) return;
 
         botao.disabled = true;
 
         document.getElementById("status").textContent =
             "Enviando suas informações...";
-        
-        gtag_report_conversion();
+
+        let enviado = false;
+
+        function enviarFormulario() {
+
+            if (enviado) return;
+
+            enviado = true;
+
+            formulario.submit();
+
+        }
+
+        setTimeout(enviarFormulario, 2000);
+
+        try {
+
+            gtag_report_conversion();
+
+        } catch (erro) {
+
+            console.error("Erro na conversão:", erro);
+
+        }
 
     });
 
@@ -422,3 +449,4 @@ function gtag_report_conversion(url) {
 
 </body>
 </html>
+
